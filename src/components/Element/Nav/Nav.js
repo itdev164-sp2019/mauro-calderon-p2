@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 
 const UL = styled.ul`
+display: block;
 list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,7 +15,7 @@ float: left;
 display: block;
   color: white;
   text-align: center;
-  padding: 16px 16px;
+  padding: 20px 20px;
   text-decoration: none;
     :hover{
         background-color: #111;
@@ -24,7 +25,7 @@ const As = styled.a`
 padding: 5px;
 padding-left: 5px;
 padding-top: 5px;
-border: solid 2px;
+border: solid 6px;
 border-color: white;
 `
 
@@ -34,8 +35,11 @@ export const NavBar = () => (
        <Li>
          <Link to="/"><As>Home</As></Link>
        </Li>
+
        <Li>
+       <Link to="./todo/">
        <As>Todo List</As>
+       </Link>
        </Li>
       </UL>
        
