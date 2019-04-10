@@ -37,7 +37,7 @@ export const NavBar = () => (
        </Li>
 
        <Li>
-       <Link to="./todo/">
+       <Link to="./page-2/">
        <As>Todo List</As>
        </Link>
        </Li>
