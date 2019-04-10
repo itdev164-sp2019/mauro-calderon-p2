@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from "gatsby"
+import {BaseContainer} from '../../Element'
+import "./nav.css"
+
 
 const UL = styled.ul`
 display: block;
@@ -21,27 +24,17 @@ display: block;
         background-color: #111;
     }
 `
-const As = styled.a`
-padding: 5px;
-padding-left: 5px;
-padding-top: 5px;
-border: solid 6px;
-border-color: white;
-`
-
 export const NavBar = () => (
    <div>
+     <BaseContainer>
      <UL>
        <Li>
-         <Link to="/"><As>Home</As></Link>
+         <div id="one"><Link to="/" activeStyle={{color: "white"}}>Home</Link></div>
        </Li>
-
        <Li>
-       <Link to="./page-2/">
-       <As>Todo List</As>
-       </Link>
+       <div id="two"><Link to="/page-2/" activeStyle={{color:"white"}}>Todo List</Link></div>
        </Li>
       </UL>
-       
+       </BaseContainer>
    </div>
 )
